@@ -2,7 +2,7 @@
 //  LiveActivityWidget.swift
 //  LiveActivityWidget
 //
-//  Created by Matheus Henrique on 13/01/25.
+//  Created by Matheus Henrique on 14/01/25.
 //
 
 import WidgetKit

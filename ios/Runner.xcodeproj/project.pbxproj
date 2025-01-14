@@ -11,14 +11,14 @@
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		3C154B982D357C1900DCB286 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C154B972D357C1800DCB286 /* LiveActivityManager.swift */; };
-		3CD409082D35E4F70049F8C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C154B7F2D3579A600DCB286 /* WidgetKit.framework */; };
-		3CD409092D35E4F70049F8C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C154B812D3579A600DCB286 /* SwiftUI.framework */; };
-		3CD4090C2D35E4F70049F8C8 /* LiveActivityWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4090B2D35E4F70049F8C8 /* LiveActivityWidgetBundle.swift */; };
-		3CD4090E2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4090D2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
-		3CD409102D35E4F70049F8C8 /* LiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4090F2D35E4F70049F8C8 /* LiveActivityWidget.swift */; };
-		3CD409122D35E4F80049F8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD409112D35E4F80049F8C8 /* Assets.xcassets */; };
-		3CD409162D35E4F80049F8C8 /* LiveActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3CD409072D35E4F70049F8C8 /* LiveActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CD4091B2D35E5060049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4090D2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
+		3CD409222D36E29B0049F8C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C154B7F2D3579A600DCB286 /* WidgetKit.framework */; };
+		3CD409232D36E29B0049F8C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C154B812D3579A600DCB286 /* SwiftUI.framework */; };
+		3CD409262D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409252D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift */; };
+		3CD409282D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
+		3CD4092A2D36E29C0049F8C8 /* LiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409292D36E29C0049F8C8 /* LiveActivityWidget.swift */; };
+		3CD4092C2D36E29D0049F8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD4092B2D36E29D0049F8C8 /* Assets.xcassets */; };
+		3CD409302D36E29D0049F8C8 /* LiveActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3CD409212D36E29B0049F8C8 /* LiveActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CD409352D36E2B10049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -33,11 +33,11 @@
 			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
 			remoteInfo = Runner;
 		};
-		3CD409142D35E4F80049F8C8 /* PBXContainerItemProxy */ = {
+		3CD4092E2D36E29D0049F8C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3CD409062D35E4F70049F8C8;
+			remoteGlobalIDString = 3CD409202D36E29B0049F8C8;
 			remoteInfo = LiveActivityWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3CD409162D35E4F80049F8C8 /* LiveActivityWidgetExtension.appex in Embed Foundation Extensions */,
+				3CD409302D36E29D0049F8C8 /* LiveActivityWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,12 +75,13 @@
 		3C154B7F2D3579A600DCB286 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3C154B812D3579A600DCB286 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		3C154B972D357C1800DCB286 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
-		3CD409072D35E4F70049F8C8 /* LiveActivityWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveActivityWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CD4090B2D35E4F70049F8C8 /* LiveActivityWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidgetBundle.swift; sourceTree = "<group>"; };
-		3CD4090D2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		3CD4090F2D35E4F70049F8C8 /* LiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidget.swift; sourceTree = "<group>"; };
-		3CD409112D35E4F80049F8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CD409132D35E4F80049F8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD4091C2D36DC3B0049F8C8 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
+		3CD409212D36E29B0049F8C8 /* LiveActivityWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveActivityWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD409252D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidgetBundle.swift; sourceTree = "<group>"; };
+		3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		3CD409292D36E29C0049F8C8 /* LiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityWidget.swift; sourceTree = "<group>"; };
+		3CD4092B2D36E29D0049F8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CD4092D2D36E29D0049F8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -94,12 +95,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3CD409042D35E4F70049F8C8 /* Frameworks */ = {
+		3CD4091E2D36E29B0049F8C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD409092D35E4F70049F8C8 /* SwiftUI.framework in Frameworks */,
-				3CD409082D35E4F70049F8C8 /* WidgetKit.framework in Frameworks */,
+				3CD409232D36E29B0049F8C8 /* SwiftUI.framework in Frameworks */,
+				3CD409222D36E29B0049F8C8 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,14 +131,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3CD4090A2D35E4F70049F8C8 /* LiveActivityWidget */ = {
+		3CD409242D36E29C0049F8C8 /* LiveActivityWidget */ = {
 			isa = PBXGroup;
 			children = (
-				3CD4090B2D35E4F70049F8C8 /* LiveActivityWidgetBundle.swift */,
-				3CD4090D2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift */,
-				3CD4090F2D35E4F70049F8C8 /* LiveActivityWidget.swift */,
-				3CD409112D35E4F80049F8C8 /* Assets.xcassets */,
-				3CD409132D35E4F80049F8C8 /* Info.plist */,
+				3CD409252D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift */,
+				3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */,
+				3CD409292D36E29C0049F8C8 /* LiveActivityWidget.swift */,
+				3CD4092B2D36E29D0049F8C8 /* Assets.xcassets */,
+				3CD4092D2D36E29D0049F8C8 /* Info.plist */,
 			);
 			path = LiveActivityWidget;
 			sourceTree = "<group>";
@@ -158,7 +159,7 @@
 			children = (
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
-				3CD4090A2D35E4F70049F8C8 /* LiveActivityWidget */,
+				3CD409242D36E29C0049F8C8 /* LiveActivityWidget */,
 				3C154B7E2D3579A600DCB286 /* Frameworks */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
@@ -170,7 +171,7 @@
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
-				3CD409072D35E4F70049F8C8 /* LiveActivityWidgetExtension.appex */,
+				3CD409212D36E29B0049F8C8 /* LiveActivityWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +179,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				3CD4091C2D36DC3B0049F8C8 /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -211,13 +213,13 @@
 			productReference = 331C8081294A63A400263BE5 /* RunnerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3CD409062D35E4F70049F8C8 /* LiveActivityWidgetExtension */ = {
+		3CD409202D36E29B0049F8C8 /* LiveActivityWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CD409172D35E4F80049F8C8 /* Build configuration list for PBXNativeTarget "LiveActivityWidgetExtension" */;
+			buildConfigurationList = 3CD409312D36E29D0049F8C8 /* Build configuration list for PBXNativeTarget "LiveActivityWidgetExtension" */;
 			buildPhases = (
-				3CD409032D35E4F70049F8C8 /* Sources */,
-				3CD409042D35E4F70049F8C8 /* Frameworks */,
-				3CD409052D35E4F70049F8C8 /* Resources */,
+				3CD4091D2D36E29B0049F8C8 /* Sources */,
+				3CD4091E2D36E29B0049F8C8 /* Frameworks */,
+				3CD4091F2D36E29B0049F8C8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -225,7 +227,7 @@
 			);
 			name = LiveActivityWidgetExtension;
 			productName = LiveActivityWidgetExtension;
-			productReference = 3CD409072D35E4F70049F8C8 /* LiveActivityWidgetExtension.appex */;
+			productReference = 3CD409212D36E29B0049F8C8 /* LiveActivityWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		97C146ED1CF9000F007C117D /* Runner */ = {
@@ -243,7 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CD409152D35E4F80049F8C8 /* PBXTargetDependency */,
+				3CD4092F2D36E29D0049F8C8 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -265,7 +267,7 @@
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = 97C146ED1CF9000F007C117D;
 					};
-					3CD409062D35E4F70049F8C8 = {
+					3CD409202D36E29B0049F8C8 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 					97C146ED1CF9000F007C117D = {
@@ -289,7 +291,7 @@
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
 				331C8080294A63A400263BE5 /* RunnerTests */,
-				3CD409062D35E4F70049F8C8 /* LiveActivityWidgetExtension */,
+				3CD409202D36E29B0049F8C8 /* LiveActivityWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -302,11 +304,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CD409052D35E4F70049F8C8 /* Resources */ = {
+		3CD4091F2D36E29B0049F8C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD409122D35E4F80049F8C8 /* Assets.xcassets in Resources */,
+				3CD4092C2D36E29D0049F8C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -366,13 +368,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CD409032D35E4F70049F8C8 /* Sources */ = {
+		3CD4091D2D36E29B0049F8C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD4090C2D35E4F70049F8C8 /* LiveActivityWidgetBundle.swift in Sources */,
-				3CD4090E2D35E4F70049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
-				3CD409102D35E4F70049F8C8 /* LiveActivityWidget.swift in Sources */,
+				3CD409262D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift in Sources */,
+				3CD409282D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
+				3CD4092A2D36E29C0049F8C8 /* LiveActivityWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C154B982D357C1900DCB286 /* LiveActivityManager.swift in Sources */,
-				3CD4091B2D35E5060049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
+				3CD409352D36E2B10049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
@@ -395,10 +397,10 @@
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 			targetProxy = 331C8085294A63A400263BE5 /* PBXContainerItemProxy */;
 		};
-		3CD409152D35E4F80049F8C8 /* PBXTargetDependency */ = {
+		3CD4092F2D36E29D0049F8C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3CD409062D35E4F70049F8C8 /* LiveActivityWidgetExtension */;
-			targetProxy = 3CD409142D35E4F80049F8C8 /* PBXContainerItemProxy */;
+			target = 3CD409202D36E29B0049F8C8 /* LiveActivityWidgetExtension */;
+			targetProxy = 3CD4092E2D36E29D0049F8C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -481,8 +483,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -490,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -545,7 +548,7 @@
 			};
 			name = Profile;
 		};
-		3CD409182D35E4F80049F8C8 /* Debug */ = {
+		3CD409322D36E29D0049F8C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,7 +561,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -575,7 +578,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter.LiveActivityWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample.LiveActivityWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -586,7 +589,7 @@
 			};
 			name = Debug;
 		};
-		3CD409192D35E4F80049F8C8 /* Release */ = {
+		3CD409332D36E29D0049F8C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -599,7 +602,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -615,7 +618,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter.LiveActivityWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample.LiveActivityWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -624,7 +627,7 @@
 			};
 			name = Release;
 		};
-		3CD4091A2D35E4F80049F8C8 /* Profile */ = {
+		3CD409342D36E29D0049F8C8 /* Profile */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -637,7 +640,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -653,7 +656,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter.LiveActivityWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample.LiveActivityWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -780,8 +783,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -789,7 +793,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -805,8 +809,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = XC8Q7BT5JZ;
+				DEVELOPMENT_TEAM = 2SG959RD7P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -814,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.liveActivityFlutter;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.liveActivityExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -835,12 +840,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CD409172D35E4F80049F8C8 /* Build configuration list for PBXNativeTarget "LiveActivityWidgetExtension" */ = {
+		3CD409312D36E29D0049F8C8 /* Build configuration list for PBXNativeTarget "LiveActivityWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CD409182D35E4F80049F8C8 /* Debug */,
-				3CD409192D35E4F80049F8C8 /* Release */,
-				3CD4091A2D35E4F80049F8C8 /* Profile */,
+				3CD409322D36E29D0049F8C8 /* Debug */,
+				3CD409332D36E29D0049F8C8 /* Release */,
+				3CD409342D36E29D0049F8C8 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

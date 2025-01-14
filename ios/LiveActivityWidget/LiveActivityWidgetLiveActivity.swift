@@ -16,8 +16,6 @@ struct LiveActivityWidgetAttributes: ActivityAttributes {
         var minutesToArrive: Int
         var carArriveProgress: Int
     }
-
-    var name: String
 }
 
 struct LiveActivityWidgetLiveActivity: Widget {
@@ -78,7 +76,7 @@ struct LiveActivityWidgetLiveActivity: Widget {
 
 extension LiveActivityWidgetAttributes {
     fileprivate static var preview: LiveActivityWidgetAttributes {
-        LiveActivityWidgetAttributes(name: "World")
+        LiveActivityWidgetAttributes()
     }
 }
 

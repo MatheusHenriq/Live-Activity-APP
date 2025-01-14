@@ -3,11 +3,24 @@ import ActivityKit
 import UIKit
 
 @main
-@objc class AppDelegate: FlutterAppDelegate {
+@objc class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
     let channelName : String = "liveActivityChannel"
     let eventName : String = "LiveActivityEvents"
+    var eventSink: FlutterEventSink?
     
+    func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+            self.eventSink = events
+            return nil
+    }
+        
+    func onCancel(withArguments arguments: Any?) -> FlutterError? {
+            return nil
+    }
     
+    private func sendEvent(value: Dictionary<String,Any?>) {
+               guard let eventSink = self.eventSink else { return }
+               eventSink(value)
+    }
     
     override func application(
         _ application: UIApplication,
@@ -24,7 +37,6 @@ import UIKit
             case "registerDevice":
                 self?.registerDevice(application: application, result: result)
                 result(true)
-                
             case "requestForNotificationPermission":
                 self?.requestNotificationPermissions(result: result)
                 result(true)
@@ -44,7 +56,12 @@ import UIKit
             default:
                 result(FlutterMethodNotImplemented)
             }}
-            
+            //observe every change in pushToStartToken and pushToUpdateToken
+            //when some change occurs, it will send to out eventChannel that we can retrive via flutter code
+            observePushToStartToken()
+            observePushUpdateToken()
+            let eventChannel = FlutterEventChannel(name:  eventName, binaryMessenger: controller.binaryMessenger)
+            eventChannel.setStreamHandler(self)
             GeneratedPluginRegistrant.register(with: self)
             return super.application(application, didFinishLaunchingWithOptions: launchOptions)
         }
@@ -61,7 +78,7 @@ import UIKit
         override func userNotificationCenter(_ center: UNUserNotificationCenter,
                                              didReceive response: UNNotificationResponse,
                                              withCompletionHandler completionHandler: @escaping () -> Void) {
-            let userInfo = response.notification.request.content.userInfo
+            _ = response.notification.request.content.userInfo
             completionHandler()
         }
 
@@ -79,4 +96,39 @@ import UIKit
                 result(granted)
             }
         }
+    func observePushToStartToken() {
+                if #available(iOS 17.2, *)  {
+                    Task {
+                        for await data in Activity<LiveActivityWidgetAttributes>.pushToStartTokenUpdates {
+                            let token = data.map {String(format: "%02x", $0)}.joined()
+                            print("pushToStartToken -> \(token)")
+                            sendEvent(value: [
+                                "eventType" : "pushToStartToken",
+                                       "value"    :   token,
+                                   ])
+                            }
+                    }
+                
+                }
+            }
+        
+        func observePushUpdateToken() {
+            if #available(iOS 16.2, *){
+                Task {
+                    for await activityData in Activity<LiveActivityWidgetAttributes>.activityUpdates {
+                        Task {
+                            for await tokenData in activityData.pushTokenUpdates {
+                                let token = tokenData.map { String(format: "%02x", $0) }.joined()
+                                print("pushToUpdateToken -> \(token)")
+                                sendEvent(value: [
+                                    "eventType" : "pushToUpdateToken",
+                                           "value"    :   token,
+                                       ])
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
 }
