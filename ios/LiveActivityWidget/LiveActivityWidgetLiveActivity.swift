@@ -66,10 +66,9 @@ struct LiveActivityWidgetLiveActivity: Widget {
                     Image("flag").resizable().frame(width: 25,height: 25).scaledToFit().aspectRatio(contentMode: .fit)
                 })}
             } minimal: {
-                Text("minimal").foregroundColor(.white)
+                if(context.state.carArriveProgress < 100){Text("Driver on the way").foregroundColor(.white)}
+                else{Text("Driver Arrives").foregroundColor(.white)}
             }
-            .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
         }
     }
 }
@@ -81,11 +80,11 @@ extension LiveActivityWidgetAttributes {
 }
 
 extension LiveActivityWidgetAttributes.ContentState {
-    fileprivate static var smiley: LiveActivityWidgetAttributes.ContentState {
+    fileprivate static var model1: LiveActivityWidgetAttributes.ContentState {
         LiveActivityWidgetAttributes.ContentState(driverCode: "Matheus", carModel: "Virtus", minutesToArrive: 10, carArriveProgress: 30)
      }
      
-     fileprivate static var starEyes: LiveActivityWidgetAttributes.ContentState {
+    fileprivate static var model2 : LiveActivityWidgetAttributes.ContentState {
          LiveActivityWidgetAttributes.ContentState(driverCode: "Matheus", carModel: "Virtus", minutesToArrive: 10, carArriveProgress: 30)
      }
 }
@@ -93,8 +92,8 @@ extension LiveActivityWidgetAttributes.ContentState {
 #Preview("Notification", as: .content, using: LiveActivityWidgetAttributes.preview) {
    LiveActivityWidgetLiveActivity()
 } contentStates: {
-    LiveActivityWidgetAttributes.ContentState.smiley
-    LiveActivityWidgetAttributes.ContentState.starEyes
+    LiveActivityWidgetAttributes.ContentState.model1
+    LiveActivityWidgetAttributes.ContentState.model2
 }
 
 struct CarArravingView : View{
@@ -108,7 +107,7 @@ struct CarArravingView : View{
         VStack{
             HStack(alignment:.center, content: {
                 VStack(alignment: .leading, content: {
-                    Text("Pickup in \(context.state.minutesToArrive) min").semiBold18() .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 2))
+                    Text("Pickup in \(context.state.minutesToArrive) min").semiBold20() .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 2))
                     Text("\(context.state.driverCode) - \(context.state.carModel)").regular16()
                 })
                 Spacer()
@@ -138,7 +137,7 @@ struct CarArrivedView : View{
         VStack{
             HStack(alignment:.center, content: {
                 VStack(alignment: .leading, content: {
-                    Text("Your Driver Arrives").semiBold18() .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 2))
+                    Text("Your Driver Arrives").semiBold20() .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 2))
                     Text("Have a confort trip").regular16()
                 })
                 Spacer()
@@ -192,7 +191,7 @@ struct ProgressBarWithCar: View {
 
 extension Text {
    
-    func semiBold18() -> some View {
+    func semiBold20() -> some View {
         self.fontWeight(.semibold).font(.system(size: 20)).foregroundColor(.white)
     }
     

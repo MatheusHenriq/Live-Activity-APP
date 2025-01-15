@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
-      title: 'L',
+      title: 'Live Activity App',
       theme: CupertinoThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.pinkAccent,

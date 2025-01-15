@@ -18,7 +18,8 @@
 		3CD4092A2D36E29C0049F8C8 /* LiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409292D36E29C0049F8C8 /* LiveActivityWidget.swift */; };
 		3CD4092C2D36E29D0049F8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD4092B2D36E29D0049F8C8 /* Assets.xcassets */; };
 		3CD409302D36E29D0049F8C8 /* LiveActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3CD409212D36E29B0049F8C8 /* LiveActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CD409352D36E2B10049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
+		3CD409362D37F96E0049F8C8 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C154B972D357C1800DCB286 /* LiveActivityManager.swift */; };
+		3CD409372D37F9800049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD409272D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -260,7 +261,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					331C8080294A63A400263BE5 = {
@@ -372,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD409362D37F96E0049F8C8 /* LiveActivityManager.swift in Sources */,
 				3CD409262D36E29C0049F8C8 /* LiveActivityWidgetBundle.swift in Sources */,
 				3CD409282D36E29C0049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
 				3CD4092A2D36E29C0049F8C8 /* LiveActivityWidget.swift in Sources */,
@@ -383,7 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C154B982D357C1900DCB286 /* LiveActivityManager.swift in Sources */,
-				3CD409352D36E2B10049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
+				3CD409372D37F9800049F8C8 /* LiveActivityWidgetLiveActivity.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
@@ -448,6 +450,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -689,6 +692,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -746,6 +750,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

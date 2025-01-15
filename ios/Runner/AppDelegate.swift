@@ -50,7 +50,7 @@ import UIKit
                 result(true)
                 break
             case "endLiveActivity":
-                liveActivityManager.stopLiveActivity()
+                liveActivityManager.endLiveActivity()
                 result(true)
                 break
             default:
@@ -68,7 +68,7 @@ import UIKit
         override func userNotificationCenter(_ center: UNUserNotificationCenter,
                                              willPresent notification: UNNotification,
                                              withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-            if #available(iOS 14.0, *) {
+           if #available(iOS 14.0, *) {
                 completionHandler([.banner, .list, .sound, .badge])
             } else {
                 completionHandler([.alert, .sound, .badge])
@@ -76,9 +76,9 @@ import UIKit
         }
 
         override func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                             didReceive response: UNNotificationResponse,
-                                             withCompletionHandler completionHandler: @escaping () -> Void) {
-            _ = response.notification.request.content.userInfo
+                                            didReceive response: UNNotificationResponse,
+                                            withCompletionHandler completionHandler: @escaping () -> Void) {
+           _ = response.notification.request.content.userInfo
             completionHandler()
         }
 

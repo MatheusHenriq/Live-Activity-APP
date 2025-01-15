@@ -48,7 +48,7 @@ class LiveActivityManager {
     }
     
         
-    func stopLiveActivity() {
+    func endLiveActivity() {
         Task {
             await self.liveActivity?.end(dismissalPolicy: .immediate)
         }
