@@ -22,14 +22,7 @@ class LiveActivityManager {
                 driverCode: info["driverCode"] as? String ?? "", carModel: info["carModel"] as? String ?? "", minutesToArrive: info["minutesToArrive"] as? Int ?? 0, carArriveProgress: info["carArriveProgress"] as? Int ?? 0
             )
             Task{
-                liveActivity = try? Activity<LiveActivityWidgetAttributes>.request(attributes: attributes,  content: .init(state: state, staleDate: nil), pushType: .token)
-                for await pushToken in liveActivity!.pushTokenUpdates {
-                    let pushTokenString = pushToken.reduce("") {
-                        $0 + String(format: "%02x", $1)
-                    }
-                    print("New Push Token: \(pushTokenString)")
-                    
-                }
+                liveActivity = try? Activity<LiveActivityWidgetAttributes>.request(attributes: attributes,  content: .init(state: state, staleDate: nil), pushType: .token)               
             }
         }
     }
