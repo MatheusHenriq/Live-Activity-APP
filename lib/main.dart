@@ -8,6 +8,7 @@ void main() async {
   await LiveActivityService.requestPushNotificationPermission()
       .then((value) async {
     await LiveActivityService.registerDevice();
+    await LiveActivityService().listener();
   });
 
   runApp(const MyApp());
